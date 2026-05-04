@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RehabAI — ИИ реабилитация кисти</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="intro-screen">
+        <h1>Перед началом калибровки</h1>
+        <p>Вы можете управлять процессом голосом. С этими командами будет легче пройти калибровку:</p>
+        <ul class="command-list">
+            <li><strong>старт</strong> — начать калибровку</li>
+            <li><strong>стоп</strong> — остановить калибровку</li>
+            <li><strong>дальше</strong> — перейти к следующему жесту или завершить сбор данных</li>
+            <li><strong>продолжить</strong> — возобновить калибровку после остановки</li>
+            <li><strong>заново</strong> — сбросить и начать калибровку заново</li>
+        </ul>
+        <button class="main-btn" id="beginBtn">▶ ПЕРЕЙТИ К КАЛИБРОВКЕ</button>
+    </div>
+
+    <div class="container hidden">
+        <div class="video-frame">
+            <canvas id="videoCanvas" width="640" height="480"></canvas>
+            <div class="timer-overlay" id="timerDisplay"></div>
+        </div>
+        
+        <div class="progress-container">
+            <div class="progress-item">
+                <div class="progress-label">ОБЩИЙ ПРОГРЕСС КАЛИБРОВКИ</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+            <div class="progress-item">
+                <div class="progress-label">ТЕКУЩИЙ ЖЕСТ</div>
+                <div class="progress-bar">
+                    <div class="progress-fill time-fill" id="timeProgressFill"></div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="main-btn" id="mainBtn">▶ НАЧАТЬ КАЛИБРОВКУ</button>
+    </div>
+
+    <!-- Библиотеки -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+
+    <!-- Модули приложения (ПРОВЕРЬТЕ ПУТИ!) -->
+    <script src="js/config.js"></script>
+    <script src="js/gestures.js"></script>
+    <script src="js/voice.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/calibration.js"></script>
+    <script src="js/camera.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

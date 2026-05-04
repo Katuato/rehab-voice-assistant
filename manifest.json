@@ -1,0 +1,44 @@
+{
+  "name": "RehabAI — ИИ реабилитация кисти",
+  "short_name": "RehabAI",
+  "description": "Голосовой ИИ-ассистент для реабилитации моторики кисти у детей",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#1a2a3a",
+  "background_color": "#0f1a24",
+  "orientation": "portrait",
+  "scope": "/",
+  "lang": "ru",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "icons/icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshots/mobile1.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Главный экран калибровки"
+    }
+  ],
+  "categories": ["health", "fitness", "medical"],
+  "prefer_related_applications": false
+}
